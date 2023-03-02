@@ -35,14 +35,6 @@ export default {
                     return res.json()
                 }).then(data => {
                     state.commit('addTaskToList', data);
-
-                    // console.log(state.state.toDoList);
-                    // if (state.state.toDoList.length % 3 === 0) {
-                    //     const task = state.state.toDoList[state.state.toDoList.length - 3];
-                    //     // changeTaskStatus(state, {id: task.id, status: task.status});
-                    //     // state.dispatch("toDoItems/changeTaskStatus", {id: task.id, status: task.status});
-                    // }
-
                     resolve(data);
                 })
                     .catch(err => reject(err))
